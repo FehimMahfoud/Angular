@@ -25,7 +25,8 @@ const appRoute:Routes= [
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsComponent
+    ContactsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
