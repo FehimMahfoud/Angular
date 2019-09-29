@@ -1,8 +1,8 @@
 <div class="container">
   <h1>Liste des contacts</h1>
-  <button class="btn btn-primary">Contact</button>
-  <button class="btn btn-primary ml-1">Nouveau Contact</button>
+  <button routerLink="/about" class="btn btn-primary">Contact</button>
+  <button routerLink="/contacts"class="btn btn-primary ml-1">Nouveau Contact</button>
   <p>
-    <app-contacts></app-contacts> 
+    <router-outlet></router-outlet> 
   </p>
 </div>
