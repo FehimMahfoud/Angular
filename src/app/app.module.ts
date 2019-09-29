@@ -17,6 +17,11 @@ const appRoute:Routes= [
   {
     path:"contacts",
     component:ContactsComponent
+  },
+  {
+    path:'',
+    redirectTo : "/about",
+    pathMatch : 'full'
   }
 
 ]
