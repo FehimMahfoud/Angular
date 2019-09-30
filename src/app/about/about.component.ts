@@ -9,11 +9,14 @@ import { map } from 'rxjs/operators'
 })
 export class AboutComponent implements OnInit {
   pageContacts :any;
-  constructor(private http:HttpClient) { }
+  
+  constructor(public http:HttpClient) { }
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/chercheContacts?mc=FEHIM&size=5&page=0').pipe(map(resp=>resp.toString())).subscribe(data=>{
+    this.http.get('http://localhost:8080/chercherContacts?mc=FE').pipe(map(resp=>resp)).subscribe(data=>{
       this.pageContacts = data;
+    },error =>{
+      console.log("Erreur");
     });  
   }
 
