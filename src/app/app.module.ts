@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { from } from 'rxjs';
 import { AboutComponent } from './about/about.component';
+import { ContactService } from 'src/services/contact.service';
+import {FormsModule} from "@angular/forms"
 
 const appRoute:Routes= [
   { 
@@ -37,9 +39,10 @@ const appRoute:Routes= [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(appRoute)
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
