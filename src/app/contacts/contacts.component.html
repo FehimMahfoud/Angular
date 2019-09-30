@@ -7,9 +7,9 @@
     <div class="card bg-info text-white">
         <div class="card-header">Contact</div>
         <div class="card-body">
-            <p>
-                 Nom : {{ pageContacts?.nom }}
-                 Email : {{ pageContacts?.email }}
+            <p *ngFor="let c of pageContacts?.content">
+                 Nom : {{ c.nom }}
+                 Email : {{ c.email }}
             </p>
         </div>
     </div>
