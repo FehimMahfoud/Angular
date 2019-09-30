@@ -10,10 +10,6 @@ import { from } from 'rxjs';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  info ={
-    nom :"Personne",
-    email :"contactMe@gmail.com"
-  }
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
