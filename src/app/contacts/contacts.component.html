@@ -1,13 +1,15 @@
 <div class="container spacer">
-    <div class="form-group">
+    <div class="form-group mt-2">
         <label for="">Mot clé</label>
-        <input class="" type="text" [(ngModel)]="motCle">
+        <input class="form-control" type="text" [(ngModel)]="motCle">
+         <button class="mt-2 btn btn-primary"   (click)="chercher()">Chercher</button>
     </div>
     <div class="card bg-info text-white">
         <div class="card-header">Contact</div>
         <div class="card-body">
             <p>
-
+                 Nom : {{ pageContacts.nom }}
+                 Email : {{ pageContacts.email }}
             </p>
         </div>
     </div>

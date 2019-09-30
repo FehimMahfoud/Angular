@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from 'src/services/contact.service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
   
- motCle:String
-
-  constructor() { }
+ motCle:string=""
+ contact:any
+ pageContacts:any
+ page:number=0
+ size:number=5
+ 
+  constructor(contact:ContactService) { }
 
   ngOnInit() {
+  }
+
+  chercher(){
+    this.contact.getContact(this.motCle, this.page, this.size).subscribe(data=>{
+      this.pageContacts=data     
+   },error=>{
+     console.log(error);
+   })
   }
 
 }
