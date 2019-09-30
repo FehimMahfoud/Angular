@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http"
+
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-about',
@@ -10,9 +14,10 @@ export class AboutComponent implements OnInit {
     nom :"Personne",
     email :"contactMe@gmail.com"
   }
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    this.http.get('http://localhost:8080/chercheContacts?mc=FEHIM&size=5&page=0');
   }
 
 }
