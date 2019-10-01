@@ -22,7 +22,7 @@ const appRoute:Routes= [
     component:ContactsComponent
   },
   {
-    path:"newContact",
+    path:"new-contact",
     component:NewContactComponent
   },
   {

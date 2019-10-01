@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewContactComponent implements OnInit {
 
+  contact:any ={
+    nom : "",
+    prenom : "",
+    email : "",
+    dateNaissance:null,
+    tel:null
+  }
   constructor() { }
 
   ngOnInit() {
