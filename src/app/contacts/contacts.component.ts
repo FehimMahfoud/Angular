@@ -11,7 +11,7 @@ export class ContactsComponent implements OnInit {
  motCle:string=""
  pageContacts:any
  pages:Array<number>
- page:number=0
+ currentPage:number=0
  size:number=5
  
   constructor(public contact:ContactService) { }
@@ -19,9 +19,15 @@ export class ContactsComponent implements OnInit {
   ngOnInit() {
   }
 
+  getPageContact(i:number){
+     this.currentPage=i
+     console.log(this.currentPage)
+     this.chercher()
+  }
+
   chercher(){
-    this.contact.getContact(this.motCle, this.page, this.size).subscribe(data=>{
-   
+    console.log("Chercher "+this.currentPage)
+    this.contact.getContact(this.motCle, this.currentPage, this.size).subscribe(data=>{
       this.pageContacts=data
       this.pages = new Array(data.totalPages)      
    

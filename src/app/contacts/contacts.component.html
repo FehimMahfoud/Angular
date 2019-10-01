@@ -17,9 +17,11 @@
                         <td>Email : {{ c.email }}</td>       
                 </tr>
             </table> 
-            <div class="container"> 
-                <ul >
-                    <li *ngFor="let p of pages; let i=index">{{p}} A{{i}}</li>
+            <div class="container "> 
+                <ul class="pagination justify-content-center ">
+                    <li class="page-item"  [ngClass]="{'active': i==currentPage }"  *ngFor="let p of pages; let i=index" >
+                      <a  class="page-link"  (click)="getPageContact(i)" > {{i}} </a> 
+                    </li>
                 </ul>
             </div>
         </div>
