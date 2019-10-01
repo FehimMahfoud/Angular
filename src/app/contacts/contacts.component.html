@@ -4,13 +4,24 @@
         <input class="form-control" type="text" [(ngModel)]="motCle">
          <button class="mt-2 btn btn-primary"   (click)="chercher()">Chercher</button>
     </div>
-    <div class="card bg-info text-white">
-        <div class="card-header">Contact</div>
+    <div class="card  ">
+        <div class="text-white card-header bg-info">Contact</div>
         <div class="card-body">
-            <p *ngFor="let c of pageContacts?.content">
-                 Nom : {{ c.nom }}
-                 Email : {{ c.email }}
-            </p>
+            <table class="table table-striped">
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                </tr>
+                <tr *ngFor="let c of pageContacts?.content">
+                        <td>Nom : {{ c.nom }}</td>
+                        <td>Email : {{ c.email }}</td>       
+                </tr>
+            </table> 
+            <div class="container"> 
+                <ul >
+                    <li *ngFor="let p of pages; let i=index">{{p}} A{{i}}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
