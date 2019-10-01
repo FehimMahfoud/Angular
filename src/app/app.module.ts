@@ -9,7 +9,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { from } from 'rxjs';
 import { AboutComponent } from './about/about.component';
 import { ContactService } from 'src/services/contact.service';
-import {FormsModule} from "@angular/forms"
+import {FormsModule} from "@angular/forms";
+import { NewContactComponent } from './new-contact/new-contact.component'
 
 const appRoute:Routes= [
   { 
@@ -19,6 +20,10 @@ const appRoute:Routes= [
   {
     path:"contacts",
     component:ContactsComponent
+  },
+  {
+    path:"newContact",
+    component:NewContactComponent
   },
   {
     path:'',
@@ -33,7 +38,8 @@ const appRoute:Routes= [
   declarations: [
     AppComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    NewContactComponent
   ],
   imports: [
     BrowserModule,
